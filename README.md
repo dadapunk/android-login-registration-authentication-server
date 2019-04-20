@@ -1,5 +1,6 @@
 
-# RESTful API using Node.js and MongoDB
+# RESTful API using Node.js and MongoDB to be used with AmucanApp 
+https://github.com/dadapunk/AmucanApp
 
 To Run Project
 --------
@@ -27,15 +28,6 @@ __Note :__
 
 Make sure to replace the header value such as __x-access-token__.
 
-Tutorial
---------
-
-https://www.learn2crack.com/2016/09/android-user-registration-login-node-server.html
-
-Video Demo
---------
-
-https://www.youtube.com/watch?v=5b0wWZuTazA
 
 Node npm modules used
 --------
@@ -58,4 +50,3 @@ nodemailer
 
 randomstring
 
-[1]:https://raw.githubusercontent.com/Learn2Crack/android-login-registration-authentication-server/master/postman/Node-Login.postman_collection.json

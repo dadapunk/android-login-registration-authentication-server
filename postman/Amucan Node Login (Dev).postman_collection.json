@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "6daa6923-653f-4a9e-86ae-a1f7e96ffdac",
+		"name": "Amucan Node Login (Dev)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Bart Simpson\",\n\t\"email\":\"test1@test.com\",\n\t\"password\":\"test\"\n}"
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test4@test.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDRAdGVzdC5jb206dGVzdA==",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1/authenticate",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6InJhai5hbWFsd0BnbWFpbC5jb20iLCJpYXQiOjE0NzQzNzY4MjcsImV4cCI6MTQ3NDM3ODI2N30.adMsRuj2NbxEHhVCmSA_ulcihaxDg8DtW83cj4ZzW-A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1users/test1@test.com",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1users",
+						"test1@test.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6InJhai5hbWFsd0BnbWFpbC5jb20iLCJpYXQiOjE0NzQzNzY4MjcsImV4cCI6MTQ3NDM3ODI2N30.adMsRuj2NbxEHhVCmSA_ulcihaxDg8DtW83cj4ZzW-A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\":\"raj\",\n\t\"newPassword\":\"raj\"\n}"
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1/users/test1@test.com",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"test1@test.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1/users/test1@test.com/password",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"test1@test.com",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Finish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"J2RsPMkq\",\n\t\"password\":\"rajamalw\"\n}"
+				},
+				"url": {
+					"raw": "http://107.23.132.242:9004/api/v1/users/test1@test.com/password",
+					"protocol": "http",
+					"host": [
+						"107",
+						"23",
+						"132",
+						"242"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"test1@test.com",
+						"password"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "22f88878-2b5d-4f3c-8971-bd02b44ae26b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c1914f36-623d-4614-b27f-08a44d65ce6b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
