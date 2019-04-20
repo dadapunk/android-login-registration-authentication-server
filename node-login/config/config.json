@@ -1,6 +1,7 @@
 {
+   
    "name" : "Amucan App",
    "email" : "amucan@mail.com",
-   "password" : "",
+   "password" : "Duoc.2019",
    "secret" : "secret"
 }

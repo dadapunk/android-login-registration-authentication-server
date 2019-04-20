@@ -68,7 +68,7 @@ exports.resetPasswordInit = email =>
 
 		.then(user => {
 
-			const transporter = nodemailer.createTransport(`smtps://${config.email}:${config.password}@smtp.gmail.com`);
+			const transporter = nodemailer.createTransport(`smtps://${config.email}:${config.password}@smtp.mail.com`);
  
 			const mailOptions = {
 
@@ -77,10 +77,10 @@ exports.resetPasswordInit = email =>
     			subject: 'Reset Password Request ', 
     			html: `Hello ${user.name},<br><br>
     			&nbsp;&nbsp;&nbsp;&nbsp; Your reset password token is <b>${random}</b>. 
-    			If you are viewing this mail from a Android Device click this <a href = "http://learn2crack/${random}">link</a>. 
+    			If you are viewing this mail from a Android Device click this <a href = "http://amucan/${random}">link</a>. 
     			The token is valid for only 2 minutes.<br><br>
     			Thanks,<br>
-    			Learn2Crack.`
+    			AmucanApp.`
     		
 			};
 

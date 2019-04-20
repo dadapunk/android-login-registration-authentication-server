@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://dada:@cluster0-7ffvo.mongodb.net/test?retryWrites=true',
+mongoose.connect('mongodb+srv://dada:Duoc.2019@cluster0-7ffvo.mongodb.net/test?retryWrites=true',
  {
    useNewUrlParser: true
  }).then( () => {
