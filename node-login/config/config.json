@@ -3,5 +3,8 @@
    "name" : "Amucan App",
    "email" : "amucan@mail.com",
    "password" : "Duoc.2019",
-   "secret" : "secret"
+   "secret" : "secret",
+   "db_user" : "dada",
+   "db_password" : "Duoc.2019",
+   "db_name" : "test"
 }
